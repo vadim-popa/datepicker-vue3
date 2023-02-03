@@ -3,18 +3,6 @@
     <p>
       Options API:
     </p>
-    <!--
-    <div>
-      <span
-        class="cursor-pointer border-1 border-lightOutline rounded hover-bg-onHover"
-        @click="toggleDatePicker"
-      >
-        <span class="px-05 py-0">
-          <PeriodSummary />
-        </span>
-      </span>
-    </div>
-    -->
     <div
       class="picker-header cursor-pointer hover-bg-onHover"
       @click="toggleDatePicker"

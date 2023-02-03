@@ -1,16 +1,14 @@
 <template>
-  <div>
-    <ToggleButton
-      v-model="modelHideTime"
-      prepend-label="Hide Time"
-    />
-  </div>
+  <ToggleButton
+    v-model="modelHideTime"
+    prepend-label="Hide Time"
+  />
 </template>
 
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import ToggleButton from "@/components/Forms/ToggleButton.vue";
 import { useHideTimeStore } from "@/store/hideTimeStore";
+import ToggleButton from "@/components/Forms/ToggleButton.vue";
 
 const hideTimeState = useHideTimeStore();
 

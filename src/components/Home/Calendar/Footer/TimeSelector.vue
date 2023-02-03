@@ -11,7 +11,7 @@
 import { computed } from "vue";
 
 interface IEmit {
-    (e: "update:modelValue", value: string): void
+  (e: "update:modelValue", value: string): void
 }
 
 const props = defineProps({

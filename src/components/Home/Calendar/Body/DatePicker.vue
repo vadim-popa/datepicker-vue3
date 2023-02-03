@@ -248,7 +248,6 @@ const selectPeriod = (hoverDate: Date): void => {
   /** check if end date is greater then start date */
   selectDatesFromCurrentMonth(indexOfStartDateFromCurrentMonth, indexOfEndDateFromCurrentMonth);
 };
-// const isItTheNextMonth = (monthFrom, hoverMonth) => monthFrom === 11 ? monthFrom > hoverMonth : monthFrom < hoverMonth;
 
 const isSelected = (date): boolean => {
   const formatedParamDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());

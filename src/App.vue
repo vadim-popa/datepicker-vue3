@@ -7,7 +7,6 @@
 <script setup lang="ts">
 import { onMounted, watch } from "vue";
 import { storeToRefs } from "pinia";
-// import { RouterLink, RouterView } from "vue-router";
 import { useDarkModeStore } from "./store/darkModeStore";
 
 const darkModeStore = useDarkModeStore();

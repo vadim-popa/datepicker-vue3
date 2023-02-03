@@ -7,7 +7,6 @@
 
 <script setup lang="ts">
 import CalendarNavbar from "@/components/Home/Calendar/Navbar/CalendarNavbar.vue";
-// import CalendarBody from "@/components/Home/Calendar/Body/CalendarBody.vue";
 import DatePickerContent from "@/components/Home/Calendar/Body/DatePickerContent.vue";
 </script>
 

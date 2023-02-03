@@ -1,0 +1,151 @@
+:root {
+  --textColor: black;
+  --onHover: #d3d3d3;
+  --onSelectionHover: #78abed;
+  --onLightSelectionHover: #add8e6;
+  --onSelection: #2776dd;
+  --innerTextColor: black;
+  --onSelectionHoverText: #ffffff;
+  --unhighlighted: #808080;
+  --hardUnhighlighted: #6d6d6d;
+  --lightOutline: #d3d3d3;
+  --generalBackground: #ffffff;
+  --clock: url(https://cdn-icons-png.flaticon.com/512/8112/8112820.png);
+}
+//[theme="dark-theme"] {
+:root.dark-theme {
+  --textColor: beige;
+  --onHover: plum;
+  --onSelectionHover: #b616b6;
+  --onLightSelectionHover: plum;
+  --onSelection: purple;
+  --onSelectionHoverText: white;
+  --unhighlighted: lightgray;
+  --hardUnhighlighted: azure;
+  --lightOutline: #d3d3d3;
+  --generalBackground: #30363d;
+  --clock: url(https://cdn-icons-png.flaticon.com/512/5910/5910421.png);
+}
+body {
+  font-family: Lucida Console,monospace;
+  color: var(--textColor);
+  background-color: var(--generalBackground);
+  -webkit-user-select:none;
+  -moz-user-select:-moz-none;
+  -ms-user-select:none;
+  user-select:none
+}
+.flex {
+  display: flex;
+}
+.items-center{
+  align-items: center;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.text-center {
+  text-align: center;
+}
+.color-gray {
+  color: gray;
+}
+.justify-center {
+  justify-content: center;
+}
+.hover {
+  &-bg-onSelectionHover {
+    &:hover{
+      @extend .hover;
+      background-color: var(--onSelectionHover);
+    }
+  }
+  &-bg-onHover {
+    &:hover{
+      @extend .hover;
+      background-color: var(--onHover);
+    }
+  }
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.border-1 {
+  border: 1px;
+}
+.border-lightOutline{
+  border: solid var(--lightOutline);
+}
+.selected {
+  background-color: var(--onSelection) !important;
+  color: var(--onSelectionHoverText) !important;
+}
+.grid-container {
+  margin: 0 20px;
+  width: 300px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.different-month {
+  color: var(--unhighlighted);
+}
+.light-selected {
+  background-color: var(--onLightSelectionHover);
+  color: var(--innerTextColor);
+}
+.text-unhighlighted {
+  color: var(--unhighlighted);
+}
+.disabled {
+  pointer-events: none;
+  opacity: .4;
+}
+.date-footer {
+  margin-top: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 732px;
+}
+input[type="time"] {
+  color: var(--textColor);
+  background-color: var(--generalBackground);
+  font-size: 14px;
+  font-family: helvetica;
+  border: none;
+}
+.time-selector {
+  outline: solid var(--lightOutline);
+  outline-width: 1px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.picker-header {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  outline: solid var(--lightOutline);
+  outline-width: 1px;
+  padding: 5px;
+  border-radius: 3px;
+}
+h5 {
+  margin: 0 5px;
+}
+@import "base/button";
+@import "base/rounded";
+@import "base/font-size";
+@import "base/font-weight";
+@import "base/margins";
+@import "base/padding";
+@import "base/height";
+@import "forms/forms";
+@import "calendar/calendarNavbar";
+@import "calendar/datePicker";
+@import "calendar/calendarFooter";
+
+
